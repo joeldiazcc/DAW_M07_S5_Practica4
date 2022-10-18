@@ -19,7 +19,23 @@
                 <th scope="col">Name</th>
                 <th scope="col">Descripcion</th>
                 <th scope="col">Price</th>
-            </th>
+            </tr>
         </thead>
+        <tbody>
+        <!-- Ir añadiendo los productos en la tabla -->
+        <?php $resultado = mysqli_query($connection, $sql);
+        $contador = 1;
+        while($product=mysqli_fetch_assoc($resultado)) { ?>
+
+            <tr>
+                <td><?php echo $contador++?></td>
+                <td><?php echo $product['Name']; ?></td>
+                <td><?php echo $product['Descripcion']; ?></td>
+                <td><?php echo $product['Price']; ?></td>
+                <td><a class="btn btn-outline-primary" href="edit.php?id=<?php echo $product['id']; ?>">Edit</a></td>
+                <td><a class="btn btn-outline-danger" href="delete.php?id=<?php echo $product['id']; ?>">Delete</a></td>
+            </tr>
+        <?php } mysqli_free_result($resultado); ?>
+        <div><a class="btn btn-success" href="form_add.php">Añadir</a></div>
     </table>
 </body>
