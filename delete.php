@@ -1,7 +1,7 @@
 <?php
 
 include 'ddbb.php';
-
+// Borrar proucte de la taula
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $query = "DELETE FROM products WHERE ID = $id"; // Borrar

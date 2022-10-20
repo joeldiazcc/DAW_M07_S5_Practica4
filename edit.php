@@ -1,5 +1,6 @@
 <?php
 include 'ddbb.php';
+// Editar un producte
 if (isset($_GET['id'])) {
     $myid = $_GET['id'];
     $query = "SELECT * PRODUCTS  WHERE ID =$myid";
