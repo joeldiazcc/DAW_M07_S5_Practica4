@@ -1,7 +1,7 @@
 <?php 
 // Conexió a la Data Base
         $db_host = "localhost";
-        $db_nombre = "products";
+        $db_nombre = "ddbb";
         $db_usuario = "root";
         $db_passwd = "";
 
