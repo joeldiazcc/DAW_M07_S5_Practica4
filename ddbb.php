@@ -6,7 +6,7 @@
         $db_passwd = "";
 
         $connection = mysqli_connect($db_host, $db_usuario, $db_passwd, $db_nombre);
-        $consulta = "SELECT * FROM PRODUCTO";
+        $consulta = "SELECT * FROM PRODUCT";
 
         $products = mysqli_query($connection, $consulta);
 ?>
