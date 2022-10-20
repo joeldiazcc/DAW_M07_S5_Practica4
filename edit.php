@@ -3,7 +3,7 @@ include 'ddbb.php';
 // Editar un producte
 if (isset($_GET['id'])) {
     $myid = $_GET['id'];
-    $query = "SELECT * PRODUCTS  WHERE ID =$myid";
+    $query = "SELECT * PRODUCT  WHERE ID =$myid";
     $mysqlquery = mysqli_query($connection, $query);
     $nom = $mysqlquery['name'];
     $descripcio = $mysqlquery['description'];

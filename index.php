@@ -1,7 +1,7 @@
 <?php 
     // Conectar la Data Base
     include 'ddbb.php';
-    $sql = "SELECT * FROM PRODUCTO";
+    $sql = "SELECT * FROM PRODUCT";
 ?>
 <head>
     <!-- Required meta tags -->
@@ -29,9 +29,9 @@
 
             <tr>
                 <td><?php echo $contador++?></td>
-                <td><?php echo $product['Name']; ?></td>
-                <td><?php echo $product['Descripcion']; ?></td>
-                <td><?php echo $product['Price']; ?></td>
+                <td><?php echo $product['name']; ?></td>
+                <td><?php echo $product['description']; ?></td>
+                <td><?php echo $product['price']; ?></td>
                 <td><a class="btn btn-outline-primary" href="edit.php?id=<?php echo $product['id']; ?>">Edit</a></td>
                 <td><a class="btn btn-outline-danger" href="delete.php?id=<?php echo $product['id']; ?>">Delete</a></td>
             </tr>
